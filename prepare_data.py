@@ -107,7 +107,14 @@ names:
     for i in range(config.NUM_CLASSES):
         yaml_content += f"  {i}: '{config.IDX_TO_CLASS[i]}'\n"
 
-    with open(config.YOLO_YAML_PATH, 'w') as f:
+    yaml_path = config.YOLO_YAML_PATH
+    # Ensure parent directory exists
+    yaml_dir = os.path.dirname(yaml_path)
+    if yaml_dir:
+        os.makedirs(yaml_dir, exist_ok=True)
+    # Ensure file exists (create if missing), then write YAML content (overwrite)
+    open(yaml_path, 'a').close()
+    with open(yaml_path, 'w') as f:
         f.write(yaml_content)
         
     print("YOLO dataset preparation complete.")

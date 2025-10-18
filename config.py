@@ -49,8 +49,8 @@ ORIGINAL_TRAIN_LIST = '2025_Karyogram_CV_Camp/train.txt'
 ORIGINAL_TEST_LIST = '2025_Karyogram_CV_Camp/test.txt'
 IMAGE_DIR = 'yolo_dataset/images'
 # --- Dataset Configuration ---
-YOLO_DATA_YAML = 'yolo_dataset/dataset.yaml'
-YOLO_YAML_PATH = 'yolo_dataset/dataset.yaml'
+YOLO_DATA_YAML = 'yolo_multiclass_dataset/dataset.yaml'
+YOLO_YAML_PATH = 'yolo_multiclass_dataset/dataset.yaml'
 
 # --- Training Hyperparameters ---
 EPOCHS = 50

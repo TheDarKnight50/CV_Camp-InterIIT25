@@ -2,7 +2,6 @@ import os
 import shutil
 from ultralytics import YOLO
 import config
-from plot_auprc import plot_from_json
 
 def create_full_path_list(original_list_path, image_dir):
     """
@@ -94,10 +93,6 @@ def main():
             exist_ok=True
         )
 
-        # Step 5: Plot results
-        print("\n--- Plotting the AUPRC curve ---")
-        json_path = os.path.join(config.RUNS_DIR, config.DETECTOR_RUN_NAME, 'predictions.json')
-        plot_from_json(json_path, val_list_path)
         print("\n--- Script finished successfully! ---")
 
     finally:

@@ -1,0 +1,4 @@
+--- ✅ Final Model Performance ---
+auPRC (mAP@50):   0.9724
+auPRC (mAP@50-95):0.7740
+---------------------------------
